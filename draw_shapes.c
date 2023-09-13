@@ -26,3 +26,21 @@ void print_triangle(int leftCol, int size)
   }
 }
 
+
+// Prints an arrow of specified size whose left edge is at col leftCol.
+void print_arrow(int leftCol, int size)
+{
+    // Draw the arrowhead (triangle)
+    print_triangle(leftCol, size);
+
+    // Calculate the column to start drawing the square to be centered around the triangle
+    int squareLeftCol = leftCol + size - 2;
+
+    // Draw the shaft (square)
+    print_square(squareLeftCol, size);  // Adjust the size of the square as needed
+}
+
+
+
+
+
